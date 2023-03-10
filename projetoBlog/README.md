@@ -12,6 +12,7 @@ Também será necessário o editor de código **Visual Studio Code** que pode se
 
 ---
 
+
 # <p align = center>**Criando um projeto com o Django**
 
 Para utilizar o django no projeto iremos criar uma nova pasta que conterá o projeto e dentro desta pasta máquina virtual `venv` para o python.
