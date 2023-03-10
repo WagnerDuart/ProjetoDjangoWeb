@@ -1,0 +1,10 @@
+{% extends "blog/base.html" %} {% load static %} 
+
+{% block title %}Blog usando Django - {{ post.title }}{% endblock %} {% block content %}
+
+  <article>
+    <h2>{{ post.title }}</h2>
+      <p class="data">Publicado em {{ post.created }} por {{ post.author }}</p>
+    {{ post.body|linebreaks}}
+  </article>
+{% endblock %}

@@ -1,0 +1,41 @@
+body {
+    margin-left: 3vw;
+    margin-right: 3vw;
+    text-align: center;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  h2 {
+    font-weight: bold;
+  }
+  
+  article {
+    margin-right: auto;
+    margin-left: auto;
+    width: 60%;
+    min-width: 400px;
+    color: #15262e;
+  }
+  
+  .data {
+    font-style: italic;
+    color: #303134;
+  }
+  
+  .artigolist
+  {
+    margin-left: auto;
+      margin-right: auto;
+      margin-top: 2vh;
+      margin-bottom: 2vh;
+      min-width: 400px;
+      max-width: 600px;
+      width: auto;
+      border-radius: 10px;
+      padding: 10px;
+      background-color: #99c9e1;
+      box-shadow: 5px 5px 10px  black;
+  }
