@@ -1,4 +1,4 @@
-# **<p align = center> Trabalho web Django**
+# **<p align = center> Trabalho Django WEB**
 
 ## **Grupo: Wagner Santos - Stephen Barreto **
 
@@ -531,17 +531,19 @@ No arquivo `base.html` vamos escrever o código:
 O arquivo `post_list.html` herdará a estrutura do `base.html`, com o código abaixo::
 
 ```html
-{% extends "blog/base.html" %} {% block title %}Blog usando Django{% endblock %}
+{% extends "blog/base.html" %} 
 
-{% block content %} {% for post in post_list %}
+{% block title %}Blog usando Django{% endblock %}
 
-<article class="artigolist">
-  <h2>{{ post.title }}</h2>
-  <p class="date">Publicado em {{post.created}} por {{ post.author }}</p>
-  {{ post.body|linebreaks|truncatewords:9 }}
-</article>
-
-{% endfor %} {% endblock %}
+{% block content %} 
+    {% for post in post_list %}
+        <article class="artigolist">
+          <h2>{{ post.title }}</h2>
+          <p class="data">Publicado em {{post.created}} por {{ post.author }}</p>
+          {{ post.body|linebreaks|truncatewords:9 }}
+        </article>
+    {% endfor %} 
+{% endblock %}
 ```
 
 Criando o html que estará um post só, na mesma pasta criaremos um arquivo `post_detail.html` com o seguinte conteúdo:
@@ -559,15 +561,16 @@ Criando o html que estará um post só, na mesma pasta criaremos um arquivo `pos
 **post_detail.html:**
 
 ```html
-{% extends "blog/base.html" %} {% load static %} {% block title %}Blog usando
-Django - {{ post.title }}{% endblock %} {% block content %}
+{% extends "blog/base.html" %}
 
-<article>
-  <h2>{{ post.title }}</h2>
-  <p class="data">Publicado em {{ post.created }} por {{ post.author }}</p>
-  {{ post.body|linebreaks}}
-</article>
+{% load static %} {% block title %}Blog usando Django - {{ post.title }}{% endblock %} 
 
+{% block content %}
+    <article>
+        <h2>{{ post.title }}</h2>
+        <p class="data">Publicado em {{ post.created }} por {{ post.author }}</p>
+        {{ post.body|linebreaks}}
+    </article>
 {% endblock %}
 ```
 
@@ -610,16 +613,24 @@ class Post(models.Model):
 Agora vamos mudar o arquivo `post_list.html` e adicionar um link para os posts completos:
 
 ```html
-{% extends "blog/base.html" %} {% block title %}Blog em Django{% endblock %} {%
-block content %} {% for post in post_list %}
-<article class="artigolist">
-  <h2>
-    <a href="{{ post.get_absolute_url }}"> {{ post.title }} </a>
-  </h2>
-  <p class="data">Publicado em {{post.created}} por {{ post.author }}</p>
-  {{ post.body | linebreaks | truncatewords:9 }}
-</article>
-{% endfor %} {% endblock %}
+{% extends "blog/base.html" %} 
+
+{% block title %}Blog em Django{% endblock %} 
+
+{%block content %}
+    {% for post in post_list %}
+        <article class="artigolist">
+            <h2>
+              <a href="{{ post.get_absolute_url }}"> 
+                  {{ post.title }} 
+              </a>
+            </h2>
+            <p class="data">Publicado em {{post.created}} por {{ post.author }}  
+            </p>
+            {{ post.body | linebreaks | truncatewords:9 }}
+        </article>
+    {% endfor %} 
+{% endblock %}
 ```
 
 Com isso só iniciar o server e colocar /blog no link ficando: `http://127.0.0.1:8000/blog` e ao clicar aparecera está tela com os posts adicionados, para adicionar entre na tela de admin e adicione os posts:
