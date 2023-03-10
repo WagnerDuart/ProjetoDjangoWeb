@@ -532,12 +532,15 @@ O arquivo `post_list.html` herdará a estrutura do `base.html`, com o código ab
 
 ```html
 {% extends "blog/base.html" %} {% block title %}Blog usando Django{% endblock %}
+
 {% block content %} {% for post in post_list %}
+
 <article class="artigolist">
   <h2>{{ post.title }}</h2>
   <p class="date">Publicado em {{post.created}} por {{ post.author }}</p>
   {{ post.body|linebreaks|truncatewords:9 }}
 </article>
+
 {% endfor %} {% endblock %}
 ```
 
