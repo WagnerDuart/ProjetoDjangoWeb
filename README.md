@@ -1,6 +1,6 @@
 # **<p align = center> Trabalho Django WEB**
 
-## **Grupo: Wagner Santos - Stephen Barreto **
+## **Grupo: Wagner Santos - Stephen Barreto**
 
 ---
 
