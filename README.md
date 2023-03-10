@@ -753,4 +753,3 @@ tela que mostra um post, no qual seu link é automático através do slug:
 Vídeo do youtuber School of Net [Clique para acessar](https://youtu.be/eK2sfDWQUXc).
 
 Vídeo do youtuber Leonardo Lourenco [Clique para acessar](https://youtu.be/aadiQA8cBAg).
-
